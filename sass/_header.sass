@@ -3,23 +3,29 @@
 	&__body
 		display: flex
 		justify-content: space-between
-		align-items: center
 		padding: 26px 0
+.logo
+	&__img
+		width: 77px
+		height: 24px
 
 .menu
+	&-burger
+		display: none
 	&-top
 		display: flex
 		&__item
 			cursor: pointer
-			position: relative
-			margin-right: 40px
-			&::before
-				content: ''
-				position: absolute
-				width: 100%
-				height: 50px
-			&:last-child
-				margin-right: 0
+			margin-left: 40px
+			&:first-child
+				margin-left: 0
+			&-containing
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 50px
 		&__link
 			color: #fff
 			font-weight: 600
@@ -31,7 +37,7 @@
 			border-radius: 8px
 			font-weight: bold
 			font-size: 16px
-			line-height: 22px
+			line-height: 22px		
 	&-sub
 		position: absolute
 		top: 44px
@@ -59,7 +65,7 @@
 			font-size: 16px
 			color: #183B56
 			&:hover
-				color: #1565D8
+				color: $primary
 				font-weight: 600
 		&-child 
 			position: absolute
@@ -78,8 +84,22 @@
 				margin-bottom: 12px
 				&:last-child
 					margin-bottom: 0
+	
+.menu-top__arrow
+.arrow
+.arrow-light
+	content: ''
+	display: inline-block
+	width: 9px
+	height: 8px
+	margin-left: 2px
+	margin-bottom: 2px
+	background-image: url(../img/angle-down.svg)
+	background-repeat: no-repeat
+	background-position: center
 
-.menu-top__containing
+
+.menu-top__item-containing
 	&:hover .menu-sub
 		visibility: visible
 		opacity: 1
@@ -88,3 +108,134 @@
 	&:hover .menu-sub-child
 		visibility: visible
 		opacity: 1
+
+
+@media	(max-width:	768px)
+	.menu
+		position: relative
+		min-width: 304px
+		&-top
+			display: none
+			position: absolute
+			top: -3px
+			right: -11px
+			z-index: 1
+			width: 100%
+			padding: 36px 24px 26px 24px
+			background-color: #fff
+			box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16)
+			border-radius: 12px
+			&--visible
+				display: block
+			&__item
+				margin-left: 0
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0
+				&-containing
+					&::before
+						display: none
+			&__link
+				color: #183B56
+				&:hover
+					color: $primary
+			&__btn
+				display: flex
+				justify-content: center
+				padding: 7px 0
+				width: 100%
+				border: 2px solid #1565D8
+				border-radius: 8px	
+		&-sub
+			display: none
+			position: relative
+			top: 0
+			min-width: 260px
+			padding: 20px 0 0 12px
+			background-color: none
+			box-shadow: none
+			border-radius: none
+			transition: 0.4s ease-in-out
+			opacity: 0
+			visibility: visible
+			&__item
+				margin-bottom: 16px
+				&:last-child
+					margin-bottom: 0
+			&__link
+				max-width: 100%
+			&-child 
+				display: none
+				position: relative
+				left: 0
+				top: 0
+				padding: 16px 0 0 10px
+				min-width: 100%
+				box-shadow: none
+				border-radius: 0
+				background-color: none
+				visibility: visible
+				transition: 0.2s ease-in-out
+				opacity: 0
+				&__item
+					line-height: 22px
+					margin-bottom: 12px
+					&:last-child
+						margin-bottom: 0
+		&-burger
+			position: relative
+			top: 0
+			left: 100%
+			transform: translateX(-100%)
+			z-index: 10
+			display: block
+			height: 23px
+			width: 24px
+			&__line
+				position: absolute
+				top: 10px
+				content: ''
+				width: 100%
+				height: 2.2px
+				background-color: #fff
+				transition: all 0.3s ease 0s
+			&::before
+				position: absolute
+				top: 0
+				content: ''
+				width: 100%
+				height: 2.2px
+				background-color: #fff
+				transition: all 0.3s ease 0s
+			&::after
+				position: absolute
+				bottom: 0
+				content: ''
+				width: 100%
+				height: 2.2px
+				background-color: #fff
+				transition: all 0.3s ease 0s
+
+.menu-burger--active
+	top: 16px
+	right: 19px
+	width: 18px
+	height: 18px
+.menu-burger--active .menu-burger__line
+	transform: scale(0)
+.menu-burger--active
+	z-index: 100
+	&::before
+		top: 8px
+		transform: rotate(45deg)
+		background-color: #000000
+	&::after
+		bottom: 8px
+		transform: rotate(-45deg)
+		background-color: #000
+.menu-top__item
+	&:hover .menu-sub
+		display: block
+.menu-sub__item
+	&:hover .menu-sub-child
+		display: block

@@ -24,6 +24,7 @@
 		text-align: center
 		letter-spacing: 0.2px
 		color: #ffffff
+		+grotesk
 	&__subtitle
 		margin-bottom: 40px
 		font-weight: 400
@@ -38,13 +39,13 @@
 		box-sizing: border-box
 		border-radius: 2000px
 		&-colored
-			margin-right: 16px
-			padding: 16px 26px 15px 59px
+			margin-right: 12px
+			padding: 13px 25px 14px 57px
 			background-color: #fff
 			font-weight: bold
 			font-size: 18px
 			line-height: 25px
-			color: #1565D8
+			color: $primary
 			&::before
 				position: absolute
 				top: 50%
@@ -55,7 +56,7 @@
 				height: 18px
 				background-image: url(../img/github.svg)
 		&-transparent
-			padding: 16px 31px 15px 25px
+			padding: 13px 26px 14px 21px
 			font-weight: bold
 			font-size: 18px
 			line-height: 25px
@@ -76,7 +77,7 @@
 			opacity: 1
 	&__link
 		margin-right: 15px
-		color: #1565D8
+		color: $primary
 		font-weight: bold
 		font-size: 18px
 		line-height: 25px
@@ -90,7 +91,8 @@
 	&-card
 		display: flex
 		margin-bottom: 16px
-		flex-basis: 466px
+		flex-basis: 49%
+		min-height: 162px
 		align-items: start
 		padding: 32px
 		border: 1px solid #E5EAF4
@@ -101,17 +103,42 @@
 		&__text
 			max-width: 400px
 		&__img
+			height: 40px
+			width: 40px
 			margin-right: 24px
 		&__title
 			margin-bottom: 4px
-			font-family: HK Grotesk
 			font-weight: bold
 			font-size: 22px
 			line-height: 33px
 			letter-spacing: 0.2px
 			color: #183B56
+			+grotesk
 		&__desc
 			font-weight: 400
 			font-size: 18px
 			line-height: 32px
 			color: #5A7184
+
+@media	(max-width:	1200px)
+	.hero-bg
+		background-size: auto
+
+@media	(max-width:	992px)
+	.features
+		max-width: 100%
+		&-card
+			flex-direction: column
+			&__img
+				margin-bottom: 24px
+
+@media	(max-width:	576px)
+	.features
+		&-card
+			flex-basis: 100%
+			align-items: center
+			&__text
+				text-align: center
+
+
+			
