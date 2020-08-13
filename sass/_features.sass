@@ -1,0 +1,82 @@
+.features
+	&__body
+		display: flex
+		align-items: center
+		flex-direction: column
+
+
+.features-cards
+	width: 100%
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+
+.feature-card
+	margin-bottom: 30px
+	padding: 48px 32px 37px 32px
+	flex-basis: 32%
+	border: 1px solid #E5EAF4
+	box-sizing: border-box
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.02)
+	border-radius: 16px
+	&__icon
+		margin-bottom: 25px
+	&__title
+		margin-bottom: 8px
+		max-width: 296px
+		font-weight: 600
+		font-size: 22px
+		line-height: 32px
+		letter-spacing: 0.2px
+		color: #183B56
+		+grotesk
+	&__text
+		margin-bottom: 11px
+		max-width: 296px
+		font-size: 18px
+		line-height: 32px
+		color: #5A7184
+	&__link
+		max-width: 296px
+		margin-right: 7px
+		font-weight: bold
+		font-size: 18px
+		line-height: 25px
+		color: #1565D8
+
+@media ( max-width: 992px	)
+	.feature-card
+		flex-basis: 49%
+		margin-bottom: 15px
+
+@media ( max-width: 768px	)
+	.feature-card
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		flex-basis: 100%
+		padding: 32px 0 41px 0
+		margin-bottom: 16px
+		&__title
+			font-size: 24px
+			line-height: 32px
+		&__text
+			font-size: 18px
+			line-height: 32px
+
+@media ( max-width: 576px )
+	.features
+		&__desc
+			margin-bottom: 40px
+	.feature-card
+		&__title
+			font-size: 20px
+			line-height: 24px
+		&__text
+			font-size: 16px
+			line-height: 28px
+
+			
+			
+	
