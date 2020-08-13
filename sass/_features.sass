@@ -1,0 +1,89 @@
+.features 
+	background-image: url(../img/section-bg.jpg)
+	background-size: 100vw
+	background-repeat: no-repeat
+	background-position: center top
+	padding-top: 236px
+	&__body
+		display: flex
+		align-items: center
+		flex-direction: column
+
+.features-card
+	position: relative
+	display: flex
+	justify-content: space-around
+	max-width: 1088px
+	width: 100%
+	box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.03)
+	border-radius: 8px 8px 16px 16px
+	background-color: #fff
+	&::before
+		position: absolute
+		z-index: 1
+		top: 0
+		content: ''
+		height: 3px
+		width: 100%
+		background: #1565D8
+	&__item
+		flex-basis: 25%
+		padding: 45px 0
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		border-right: 1px solid #F2F5FA
+		&:last-child
+			border-right: none
+	&__icon
+		margin-bottom: 32px
+	&__figures
+		font-weight: bold
+		font-size: 36px
+		line-height: 48px
+		text-align: center
+		letter-spacing: 0.2px
+		color: #183B56
+		+grotesk
+	&__text
+		font-size: 18px
+		line-height: 32px
+		text-align: center
+		color: #5A7184
+@media	( max-width: 1200px )
+	.features 
+		padding-top: 160px
+@media	( max-width: 768px )
+	.features 
+		padding-top: 120px
+	.features-card
+		flex-direction: column
+		&__item
+			padding: 38px 0
+			flex-basis: 100%
+			border-right: 0
+			border-bottom: 1px solid #F2F5FA
+			&:last-child
+				border-bottom: 0
+
+@media ( max-width: 576px )
+	.features
+		padding-top: 80px
+		background-image: none
+		background: linear-gradient(180deg, #F8FBFF 0%, rgba(250, 251, 251, 0.0001) 100%)
+		&__desc
+			margin-bottom: 40px
+			
+	
+
+
+	
+
+
+			
+
+		
+
+
+
