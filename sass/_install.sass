@@ -1,0 +1,108 @@
+.install
+	padding-bottom: 97px
+	&__body
+		display: flex
+		align-items: center
+		flex-direction: column
+	&__subtitle
+	&__title
+	&__desc
+	&__code-block
+	&__opportunities
+
+.code-block
+	overflow: hidden
+	max-width: 612px
+	width: 100%
+	display: flex
+	justify-content: space-between
+	flex-direction: column
+	padding: 32px
+	margin-bottom: 24px
+	background: #0F1F2B
+	border-radius: 16px
+	&__buttons
+		display: flex
+		align-items: center
+		margin-bottom: 36px
+		overflow-x: scroll
+	&__button
+		margin-right: 12px
+		padding: 8px 16px
+		font-weight: 600
+		font-size: 18px
+		line-height: 25px
+		text-align: center
+		color: #5A7184
+		background-color: #1B2A36
+		border-radius: 6px
+		&:last-child
+			margin-right: 0
+	&__text
+		display: none
+		font-size: 16px
+		line-height: 20px
+		color: #fff
+		+mono
+		&--light
+			color: #5A7184
+		&--accent
+			color: #00B8D9
+
+.code-block__button.active
+	background-color: #fff
+	color: #183B56
+.code-block__text.active 
+	display: block
+
+.code-block__buttons::-webkit-scrollbar
+	width: 0
+	height: 0
+.code-block__buttons::-webkit-scrollbar-track
+	background: none
+
+.install-opportunities
+	max-width: 612px
+	width: 100%
+	display: flex
+	&__item 
+		margin-right: 31px
+		display: flex
+		align-items: center
+		&:last-child
+			margin-right: 0
+	&__img
+		height: 24px
+		width: 24px
+		margin-right: 12px
+	&__text
+		font-size: 16px
+		line-height: 22px
+		color: #183B56
+@media	(max-width:	768px)
+	.install
+		padding-bottom: 105px
+
+@media	(max-width:	576px)
+	.install
+		padding-bottom: 84px
+	.code-block
+		padding: 24px 0 24px 24px
+	.install-opportunities
+		flex-direction: column
+		align-items: center
+		&__item 
+			margin-right: 0
+			margin-bottom: 16px
+			&:last-child
+				margin-bottom: 0
+
+			
+
+
+
+			
+	    
+
+
+	

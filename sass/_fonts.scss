@@ -25,6 +25,19 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'SFMono';
+	src: url("../fonts/SFMono-Regular.woff") format("woff"),
+		url("../fonts/SFMono-Regular.woff2") format("woff2"),
+		url("../fonts/SFMono-Regular.ttf") format("ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
 @mixin grotesk {
 	font-family: 'HK Grotesk', sans-serif
+}
+
+@mixin mono {
+	font-family: 'SFMono', sans-serif
 }

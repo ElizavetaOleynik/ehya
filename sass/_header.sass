@@ -61,6 +61,7 @@
 	box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16)
 	border-radius: 12px
 	display: none
+	
 
 .sub-menu__item
 	position: relative
@@ -73,7 +74,7 @@
 
 .sub-menu__link
 	display: inline-block
-	max-width: 190px
+	max-width: 175px
 	font-weight: 400
 	font-size: 16px
 	line-height: 22px
@@ -116,6 +117,14 @@
 	border-radius: 12px
 	background-color: #ffffff
 	display: none
+	&::before
+		position: absolute
+		z-index: 1
+		top: 0
+		left: -50px
+		content: ''
+		width: 50px
+		height: 100%
 
 .sub-sub-menu__item
 	position: relative
@@ -124,6 +133,7 @@
 		margin-bottom: 0
 	&:hover
 		cursor: pointer
+	
 
 .sub-sub-menu__link
 	line-height: 22px
@@ -155,7 +165,22 @@ body.touch .sub-menu__list.open
 
 body.touch .sub-sub-menu__list.open
 	display: block
-
+.lock 
+	overflow: hidden
+@media	( max-width: 1370px )
+	.sub-sub-menu__list
+		position: relative
+		left: 0
+		top: 0
+		padding: 16px 0 0px 10px
+		min-width: 190px
+		box-shadow: 0
+		border-radius: 0
+		background-color: none
+		box-shadow: none
+		display: none
+		&::before
+			display: none
 @media	( max-width: 768px )
 	.header
 		max-width: 100vw
@@ -165,6 +190,7 @@ body.touch .sub-sub-menu__list.open
 			justify-content: space-between
 			padding: 28px 0
 	.menu__list
+		overflow: auto
 		min-width: 304px
 		display: none
 		position: absolute
@@ -214,17 +240,7 @@ body.touch .sub-sub-menu__list.open
 		&:last-child
 			margin-bottom: 0
 
-	.sub-sub-menu__list
-		position: relative
-		left: 0
-		top: 0
-		padding: 16px 0 0px 10px
-		min-width: 190px
-		box-shadow: 0
-		border-radius: 0
-		background-color: none
-		box-shadow: none
-		display: none
+	
 
 	.menu__link-btn
 		display: flex
