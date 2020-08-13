@@ -1,0 +1,125 @@
+.sponsors
+	padding-top: 81px
+	padding-bottom: 191px
+	&__body
+		display: flex
+		align-items: center
+		justify-content: space-around
+	&__text
+		margin-right: 141px
+	&__title
+		max-width: 263px
+		margin-bottom: 44px
+		font-weight: bold
+		font-size: 36px
+		line-height: 48px
+		letter-spacing: 0.2px
+		color: #183B56
+		+grotesk
+	&__button
+		padding: 11px 22px
+		font-weight: bold
+		font-size: 16px
+		line-height: 22px
+		text-align: center
+		color: #1565D8
+		border: 2px solid #1565D8
+		box-sizing: border-box
+		border-radius: 2000px
+	&__img
+		display: block
+		width: 100%
+		height: 100%
+
+
+.images-block
+	position: relative
+	width: 494px
+	height: 336px
+	&__item
+		position: absolute
+		box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05)
+		border-radius: 100%
+		max-width: 140px
+		max-height: 140px
+		&--1
+			top: 0
+			left: 0
+		&--2
+			top: 50px
+			left: 50%
+			transform: translateX(-50%)
+		&--3
+			top: 40px
+			right: 0
+		&--4
+			bottom: 0
+			left: 94px
+		&--5
+			bottom: 4px
+			right: 93px
+
+@media	(max-width:	992px)
+	.sponsors
+		padding-top: 82px
+		padding-bottom: 88px
+		&__body
+			flex-direction: column
+			align-items: center
+		&__text
+			text-align: center
+			margin-right: 0
+		&__title
+			max-width: 100%
+			text-align: center
+			margin-bottom: 28px
+		&__button
+			margin-bottom: 40px
+
+@media	(max-width:	768px)
+	.sponsors
+		padding-bottom: 95px
+		&__title
+			font-size: 32px
+			line-height: 40px
+			margin-bottom: 28px
+
+@media	(max-width:	576px)
+	.sponsors
+		padding-top: 64px
+		padding-bottom: 64px
+		&__title
+			font-size: 28px
+			line-height: 36px
+			margin-bottom: 20px
+		&__button
+			margin-bottom: 48px
+	.images-block
+		width: 286px
+		height: 463px
+		&__item
+			position: absolute
+			&--1
+				top: 240px
+				left: 0
+			&--2
+				top: 0
+				left: 40%
+				transform: translateX(0)
+			&--3
+				top: 150px
+				right: 0
+			&--4
+				bottom: 238px
+				left: 0
+			&--5
+				bottom: 0
+				right: 0
+		
+
+
+
+
+
+
+
