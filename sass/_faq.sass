@@ -3,12 +3,18 @@
 	background-size: 100vw
 	background-repeat: no-repeat
 	background-position: center top
+	background-size: cover
 	padding-top: 288px
+	padding-bottom: 160px
 	&__body
 		display: flex
-		justify-content: space-between
 		align-items: flex-start
+		justify-content: space-between
+		margin-bottom: 136px
 	&__text
+		flex-basis: 44.47%
+	&__accordion
+		flex-basis: 45.6%
 	&__subtitle
 		text-align: left
 	&__title
@@ -26,10 +32,9 @@
 		margin-bottom: 23px
 	&__icon
 		margin-right: 16px
+	&__img
 		height: 24px
 		width: 24px
-	&__img
-		width: 100%
 	&__text
 		max-width: 417px
 	&__title
@@ -42,4 +47,151 @@
 		font-size: 16px
 		line-height: 28px
 		color: #5A7184
+
+.faq-review
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	&__quote
+		margin-bottom: 18px
+		display: block
+		content: ''
+		width: 40px
+		height: 46px
+		background-image: url(../img/quote-left.svg)
+		background-repeat: no-repeat
+		background-position: center 
+	&__text
+		max-width: 750px
+		margin-bottom: 47px
+		font-family: HK Grotesk
+		font-size: 40px
+		line-height: 60px
+		text-align: center
+		letter-spacing: 0.2px
+		color: #B3BAC5
+		font-weight: bold
+	&__profile
+		display: flex
+		justify-content: center
+	&__avatar
+		margin-right: 16px
+		border: 1px solid #FFFFFF
+		overflow: hidden
+		border-radius: 50%
+		flex: 0 0 40px
+		&-img
+			display: block
+			width: 100%
+			min-height: 100%
+			object-fit: cover
+	&__user
+		&-name
+			font-weight: 600
+			font-size: 16px
+			line-height: 22px
+			color: #FFFFFF
+		&-status
+			display: block
+			font-style: italic
+			font-size: 14px
+			line-height: 19px
+			color: #5A7184
+
+
+
+@media ( max-width: 992px	)
+	.faq
+		padding-top: 204px
+		padding-bottom: 96px
+		&__body
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			margin-bottom: 92px
+		&__text
+			flex-basis: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			font-weight: 700
+		&__accordion
+			flex-basis: 80%
+		&__subtitle
+			text-align: center
+			font-size: 14px
+			line-height: 19px
+		&__title
+			text-align: center
+			font-size: 32px
+			line-height: 40px
+		&__desc
+			text-align: center
+			font-size: 18px
+			line-height: 32px
+
+	.faq-info
+		display: flex
+		max-width: 672px
+		justify-content: space-between
+		margin-bottom: 46px
+		&__item
+			margin-bottom: 0
+			flex-basis: 47.61%
+		&__icon
+			margin-right: 16px
+
+@media ( max-width: 768px	)
+	.faq
+		&__accordion
+			flex-basis: 100%
+	.faq-review
+		&__text
+			max-width: 640px
+			margin-bottom: 40px
+			font-weight: 400
+
+@media ( max-width: 576px )
+	.faq
+		padding-top: 48px
+		padding-bottom: 48px
+		background-image: none
+		background-color: #0D2436
+		&__body
+			margin-bottom: 88px
+		&__subtitle
+			font-size: 14px
+			line-height: 14px
+		&__title
+			font-size: 28px
+			line-height: 36px
+			max-width: 272px
+		&__desc
+			font-size: 16px
+			line-height: 28px
+			max-width: 272px
+			margin-bottom: 32px
+	.faq-info
+		flex-wrap: wrap
+		&__item
+			flex-basis: 100%
+			max-width: 272px
+			margin: 21px
+			&:last-child
+				margin-bottom: 0
+
+	.faq-review
+		&__quote 
+			margin-bottom: 30px
+		&__text
+			font-size: 28px
+			line-height: 44px
+			letter-spacing: 1px
+			color: #FFFFFF
+			margin-bottom: 24px
+
+	
+
 
