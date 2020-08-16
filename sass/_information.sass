@@ -1,9 +1,11 @@
 .information 
-	padding-top: 236px
+	padding-top: 223px
 	&__body
 		display: flex
 		align-items: center
 		flex-direction: column
+	&__desc
+		margin-bottom: 55px
 
 .information-card
 	position: relative
@@ -14,6 +16,7 @@
 	box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.03)
 	border-radius: 8px 8px 16px 16px
 	background-color: #fff
+	overflow: hidden
 	&::before
 		position: absolute
 		z-index: 1
@@ -55,13 +58,18 @@
 		padding-top: 120px
 	.information-card
 		flex-direction: column
+		max-width: 672px
 		&__item
-			padding: 38px 0
+			padding: 38px 38px 44px 38px
 			flex-basis: 100%
 			border-right: 0
 			border-bottom: 1px solid #F2F5FA
 			&:last-child
 				border-bottom: 0
+		&__figures
+			margin-bottom: 1px
+		&__icon
+			margin-bottom: 27px
 
 @media ( max-width: 576px )
 	.information
@@ -69,7 +77,19 @@
 		background-image: none
 		background: linear-gradient(180deg, #F8FBFF 0%, rgba(250, 251, 251, 0.0001) 100%)
 		&__desc
-			margin-bottom: 40px
+			margin-bottom: 34px
+		&-card
+			&__item
+				padding: 33px 38px 29px 38px
+			&__icon
+				margin-bottom: 32px
+			&__figures
+				font-size: 32px
+				line-height: 42px
+				margin-bottom: 3px
+			&__text
+				font-size: 16px
+				line-height: 28px
 			
 	
 

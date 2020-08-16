@@ -1,4 +1,5 @@
 .install
+	padding-top: 78px
 	padding-bottom: 97px
 	&__body
 		display: flex
@@ -44,9 +45,9 @@
 		line-height: 20px
 		color: #fff
 		+mono
-		&--light
+		&_light
 			color: #5A7184
-		&--accent
+		&_accent
 			color: #00B8D9
 
 .code-block__button.active
@@ -82,14 +83,33 @@
 @media	(max-width:	768px)
 	.install
 		padding-bottom: 105px
+		&-opportunities
+			&__item 
+				margin-right: 34px
 
 @media	(max-width:	576px)
 	.install
 		padding-bottom: 84px
+		padding-top: 80px
+		&__subtitle
+			margin-bottom: 1px
+		&__title
+			max-width: 80%
 		&__desc
 			margin-bottom: 36px
+			max-width: 272px
 	.code-block
 		padding: 24px 0 24px 24px
+		margin-bottom: 20px
+		&__buttons
+			margin-bottom: 24px
+		&__button
+			font-size: 14px
+			line-height: 20px
+			padding: 6px 12px
+		&__text
+			font-size: 14px
+			line-height: 20px
 	.install-opportunities
 		flex-direction: column
 		align-items: center
@@ -98,6 +118,9 @@
 			margin-bottom: 16px
 			&:last-child
 				margin-bottom: 0
+		&__text
+			font-size: 14px
+			line-height: 20px
 
 			
 

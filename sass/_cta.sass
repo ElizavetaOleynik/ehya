@@ -1,0 +1,72 @@
+.cta
+	background-image: url(../img/cta-bg.jpg)
+	background-position: center top
+	background-repeat: no-repeat
+	background-size: cover
+	padding-top: 120px
+	padding-bottom: 122px
+	&__body
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__title
+		font-family: HK Grotesk
+		font-weight: 700
+		font-size: 36px
+		line-height: 48px
+		letter-spacing: 0.2px
+		color: #FFFFFF
+		text-align: left
+		max-width: 458px
+		margin-bottom: 0
+	&-buttons
+		display: flex
+		justify-content: space-between
+		max-width: 416px
+		width: 100%
+		flex-wrap: wrap
+		&__button-colored 
+			color: #183B56
+			&::before
+				background-image: url(../img/github-black.svg)
+
+
+
+@media ( max-width: 1200px )
+	.cta
+		padding-top: 80px
+		padding-bottom: 80px
+		&__body
+			flex-direction: column
+			justify-content: center
+		&__title
+			text-align: center
+			margin-bottom: 44px
+
+@media ( max-width: 768px )
+	.cta 
+
+
+@media ( max-width: 576px )
+	.cta
+		&__body
+		&__title
+			font-size: 28px
+			line-height: 36px
+			margin-bottom: 42px
+		&-buttons
+			max-width: 207px
+			flex-direction: column
+			&__button-colored
+				height: 48px
+				font-size: 16px
+				line-height: 22px
+				margin-bottom: 12px
+			&__button-transparent
+				height: 48px
+				font-size: 16px
+				line-height: 22px
+
+	
+
+

@@ -1,12 +1,12 @@
 .sponsors
-	padding-top: 81px
-	padding-bottom: 63px
+	padding-top: 123px
+	padding-bottom: 106px
 	&__body
 		display: flex
 		align-items: center
-		justify-content: space-around
 	&__text
-		margin-right: 141px
+		padding-left: 85px
+		margin-right: 160px
 	&__title
 		max-width: 263px
 		margin-bottom: 44px
@@ -17,7 +17,7 @@
 		color: #183B56
 		+grotesk
 	&__button
-		padding: 11px 22px
+		padding: 11px 25px
 		font-weight: bold
 		font-size: 16px
 		line-height: 22px
@@ -50,7 +50,7 @@
 			left: 50%
 			transform: translateX(-50%)
 		&--3
-			top: 40px
+			top: 30px
 			right: 0
 		&--4
 			bottom: 0
@@ -78,11 +78,15 @@
 
 @media	(max-width:	768px)
 	.sponsors
-		padding-bottom: 64px
+		padding-bottom: 0
+		&__text 
+			padding-left: 0
 		&__title
 			font-size: 32px
 			line-height: 40px
-			margin-bottom: 28px
+			margin-bottom: 30px
+		&__button
+			padding: 11px 23px
 
 @media	(max-width:	576px)
 	.sponsors
@@ -104,7 +108,7 @@
 				left: 0
 			&--2
 				top: 0
-				left: 40%
+				left: 33%
 				transform: translateX(0)
 			&--3
 				top: 150px

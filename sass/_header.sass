@@ -3,23 +3,23 @@
 	&__body
 		display: flex
 		justify-content: space-between
-		padding: 26px 0
-.logo
-	&__img
-		width: 77px
-		height: 24px
+		padding: 40px 0
 
+.logo
+	width: 77px
+	height: 24px
+	&__img
+		
 .menu__list
 	display: flex
 
 .menu__item
 	position: relative
-	margin-left: 40px
+	margin-left: 47px
 	&:hover
 		cursor: pointer
 
 .menu__link
-	color: #fff
 	font-weight: 600
 	font-size: 16px
 	line-height: 22px
@@ -30,6 +30,10 @@
 		content: ''
 		width: 100%
 		height: 50px
+	&-light
+		color: #fff
+	&-dark
+		color: #183B56
 
 .menu__arrow
 	position: absolute
@@ -38,7 +42,6 @@
 	content: ''
 	width: 8px
 	height: 18px
-	background-image: url(../img/menu-arrow-down.svg)
 	background-position: center center 
 	background-repeat: no-repeat
 	&::after
@@ -48,11 +51,15 @@
 		content: ''
 		width: 30px
 		height: 30px
+	&_light
+		background-image: url(../img/menu-arrow-down.svg)
+	&_dark
+		background-image: url(../img/arrow-down-dark.svg)
 
 .menu__arrow.active 
 	transform: rotate(180deg)
 
-.sub-menu__list
+.sub-menu
 	position: absolute
 	top: 38px
 	min-width: 260px
@@ -62,7 +69,6 @@
 	border-radius: 12px
 	display: none
 	
-
 .sub-menu__item
 	position: relative
 	min-width: 196px
@@ -107,7 +113,7 @@
 .sub-menu__arrow.active
 	background-image: url(../img/sub-menu-arrow-down.svg)
 	
-.sub-sub-menu__list
+.sub-sub-menu
 	position: absolute
 	left: 105%
 	top: -11px
@@ -142,33 +148,45 @@
 		color: $primary
 		font-weight: bold
 
-.menu__link-btn
+.menu__button-light
 	padding: 11px 22px
-	border: 2px solid #FFFFFF
 	border-radius: 8px
 	font-weight: bold
 	font-size: 16px
 	line-height: 22px
+	border: 2px solid #FFFFFF
+
+.menu__button-dark
+	padding: 11px 22px
+	border-radius: 2000px
+	font-weight: bold
+	font-size: 16px
+	line-height: 22px
+	border: 2px solid #183B56
+
+		
 
 .menu-burger
 	display: none
 
 
-body.mouse .menu__item:hover .sub-menu__list
+body.mouse .menu__item:hover .sub-menu
 	display: block
 
-body.mouse .sub-menu__item:hover .sub-sub-menu__list
+body.mouse .sub-menu__item:hover .sub-sub-menu
 	display: block
 
-body.touch .sub-menu__list.open
+body.touch .sub-menu.open
 	display: block
 
-body.touch .sub-sub-menu__list.open
+body.touch .sub-sub-menu.open
 	display: block
 .lock 
 	overflow: hidden
+
+
 @media	( max-width: 1370px )
-	.sub-sub-menu__list
+	.sub-sub-menu
 		position: relative
 		left: 0
 		top: 0
@@ -185,10 +203,20 @@ body.touch .sub-sub-menu__list.open
 	.header
 		max-width: 100vw
 		position: relative
+		&__logo
 		&__body
+			max-width: 650px
+			margin: 0 auto
 			display: flex
 			justify-content: space-between
+			align-items: center
 			padding: 28px 0
+
+	.logo
+		&__img
+			width: 77px
+			height: 24px
+
 	.menu__list
 		overflow: auto
 		min-width: 304px
@@ -218,7 +246,7 @@ body.touch .sub-sub-menu__list.open
 	.menu__arrow.active 
 		transform: rotate(90deg)
 	
-	.sub-menu__list
+	.sub-menu
 		position: relative
 		top: 0
 		min-width: 244px
@@ -257,11 +285,12 @@ body.touch .sub-sub-menu__list.open
 		transform: translateX(-100%)
 		z-index: 10
 		display: block
-		height: 23px
-		width: 24px
+		height: 18px
+		width: 22px
 		&__line
 			position: absolute
-			top: 10px
+			top: 50%
+			transform: translateY(-50%)
 			content: ''
 			width: 100%
 			height: 2.2px
@@ -316,6 +345,7 @@ body.touch .sub-sub-menu__list.open
 	.header
 		&__body
 			padding: 20px 0
+			max-width: 94%
 	.menu__list
 		top: 11px
 		left: 8px

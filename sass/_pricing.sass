@@ -1,0 +1,232 @@
+.pricing
+	padding-bottom: 238px
+	&-bg
+		background-image: url(../img/pricing-bg.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center top
+
+.pricing-card__cost_1
+	display: block
+.pricing-card__cost_2
+	display: none
+.pricing-card__cost_1--hidden
+	display: none
+.pricing-card__cost_2--visible
+	display: block
+.pricing-card__span_1
+	display: block
+.pricing-card__span_2
+	display: none
+.pricing-card__span_1--hidden
+	display: none
+.pricing-card__span_2--visible
+	display: block
+
+.pricing-cards
+	display: flex
+	justify-content: space-between
+	max-width: 1020px
+	width: 100%
+.pricing-card
+	overflow: hidden
+	padding: 48px 36px 40px 36px
+	background-color: #fff
+	box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.03)
+	border-radius: 8px
+	&_standart
+		border-top: 3px solid #3F598A
+	&_essentials
+		border-top: 3px solid #36B37E
+	&_premium
+		border-top: 3px solid #1565D8
+	&__inner
+		max-width: 248px
+		display: flex
+		flex-direction: column
+	&__price
+		display: flex
+		align-items: flex-end
+		margin-bottom: 18px
+	&__cost
+		font-family: HK Grotesk
+		font-weight: 700
+		font-size: 40px
+		line-height: 46px
+		margin-right: 2px
+		&_standart
+			color: #183B56
+		&_essentials
+			color: #36B37E
+		&_premium
+			color: #1565D8
+	&__cost_1
+	&__cost_2
+	&__span
+		font-size: 16px
+		line-height: 22px
+		color: #5A7184
+	&__title
+		font-family: HK Grotesk
+		font-weight: 700
+		font-size: 24px
+		line-height: 32px
+		letter-spacing: 0.2px
+		color: #183B56
+		margin-bottom: 12px
+	&__desc
+		font-size: 16px
+		line-height: 28px
+		color: #5A7184
+		margin-bottom: 24px
+	&__line
+		content: ''
+		display: block
+		width: 100%
+		height: 1px
+		background-color: #E5EAF4
+		margin-bottom: 32px
+	&__features 
+		min-height: 168px
+		margin-bottom: 36px
+	&__button
+		align-self: self-end
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 11px 20px 11px 22px
+		width: 100%
+		border: 2px solid #1565D8
+		box-sizing: border-box
+		border-radius: 2000px
+		color: #1565D8
+		&-text
+		&-arrow
+			width: 13px
+			height: 16px
+			background-position: center 
+			background-size: contain
+			background-repeat: no-repeat
+			background-image: url(../img/arrow-right-blue.svg)
+		&:hover
+			color: #fff
+			background-color: #1565D8
+.pricing-card__button:hover .pricing-card__button-arrow
+	background-image: url(../img/arrow-right-white.svg)
+
+
+.card-features
+	display: flex
+	flex-direction: column
+	&_mobile
+		display: none
+	&__item
+		display: flex
+		align-items: center
+		margin-bottom: 24px
+		&:last-child
+			margin-bottom: 0
+	&__img
+		width: 24px
+		height: 24px
+		margin-right: 12px
+	&__text
+		font-size: 16px
+		line-height: 22px
+		color: #183B56
+
+.switch
+	display: flex
+	align-items: center
+	margin-bottom: 88px
+	&__text
+		font-weight: 700
+		font-size: 16px
+		line-height: 22px
+		color: #5A7184
+		&_left
+			margin-right: 16px
+		&_right
+			margin-left: 16px
+			position: relative
+		&-sale
+			position: absolute
+			bottom: -104%
+			left: 0
+			font-family: HK Grotesk
+			font-weight: 700
+			font-size: 16px
+			line-height: 28px
+			letter-spacing: 0.1px
+			color: #36B37E
+	&__input
+		position: relative
+		width: 64px
+		height: 36px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		outline: none
+		background: #FFFFFF
+		box-shadow: 0px 10px 20px rgba(20, 45, 65, 0.08)
+		border-radius: 18px
+		transition: .4s
+		&::before
+			position: absolute 
+			content: ''
+			width: 26px
+			height: 26px
+			border-radius: 50%
+			top: 5px
+			left: 5px
+			background: linear-gradient(180deg, #35B27D 0%, #28A671 100%)
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2)
+			transition: .4s
+			transform: scale(1.1)
+		&:checked
+			&::before
+				left: 30px
+
+@media ( max-width: 1200px )
+	.pricing-cards
+		flex-direction: column
+		align-items: center
+	.pricing-card
+		padding: 48px 36px 48px 36px
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		max-width: 650px
+		margin-bottom: 24px
+		&:last-child
+			margin-bottom: 
+		&__title
+			margin-bottom: 10px
+		&__line
+			display: none
+		&__desc
+			margin-bottom: 32px
+		&__button
+			border-radius: 8px
+			width: 200px
+		&__inner
+			max-width: 248px
+			margin-right: 56px
+		&__features
+		&__button
+
+	.card-features
+		&_desctop
+			display: none
+			max-width: 248px
+		&_mobile
+			max-width: 220px
+			display: block
+			margin-bottom: 0
+			
+			
+		
+			
+
+	
+

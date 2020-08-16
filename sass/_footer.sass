@@ -1,0 +1,161 @@
+.footer
+	padding: 128px 0 145px
+	&__body
+		display: flex
+		margin-bottom: 96px
+	&__info
+		max-width: 263px
+		margin-right: 29px
+	&__logo
+		&-img
+			width: 90px
+			height: 28px
+	&__subtitle
+		margin-top: 26px
+		margin-bottom: 32px
+		font-weight: 400
+		font-size: 16px
+		line-height: 28px
+		color: #5A7184
+	&__social-links
+	&__menu
+	&__button
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__copyright
+		margin-top: 24px
+		
+.social-links
+	display: flex
+	&__link
+		margin-right: 6px
+	&__img
+
+.footer-menu
+	display: flex
+	justify-content: space-between
+	&__list
+		min-width: 165px
+		margin-right: 30px
+		&:last-child
+			margin-right: 0
+	&__title
+		margin-bottom: 31px
+		font-weight: 700
+		font-size: 18px
+		line-height: 25px
+		color: #183B56
+	&__item
+		margin-bottom: 24px
+		&:last-child
+			margin-bottom: 0
+	&__link
+		font-size: 16px
+		line-height: 22px
+		color: #183B56
+
+@media ( max-width: 1200px )
+	.footer
+		&__info
+			margin-right: 50px
+	.footer-menu
+		&__list 
+			min-width: 100px
+
+
+@media ( max-width: 992px )
+	.footer
+		padding: 64px 0
+		&__info
+			width: 263px
+			margin-right: 100px
+	.footer-menu
+		flex-wrap: wrap
+		justify-content: flex-start
+		&__list
+			flex-basis: 30%
+			margin-bottom: 48px
+			&:nth-last-child(2)
+				margin-bottom: 0
+				
+
+@media ( max-width: 768px )
+	.footer
+		&__info
+			max-width: 253px
+			width: 253px
+			margin-right: 30px
+		&__subtitle
+			width: 253px
+		&__body
+			padding-left: 11px
+	.footer-menu
+		flex-wrap: wrap
+		max-width: 358px
+		justify-content: space-between
+		&__list
+			max-width: 165px
+			flex-basis: 50%
+			margin-right: 0
+
+@media ( max-width: 650px )
+	.footer
+		padding: 48px 0 64px
+		&__body
+			padding-left: 0
+		&__subtitle
+			font-size: 14px
+			line-height: 24px
+		&__button
+			display: none
+		&__body
+			flex-direction: column
+			margin-bottom: 0
+		&__info
+			align-self: center
+			text-align: center
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-right: 0
+		&__menu
+			order: -1
+			margin-bottom: 47px
+@media ( max-width: 400px )
+	.footer
+		&__subtitle
+			margin-top: 9px
+			margin-bottom: 20px
+	.footer-menu
+		max-width: 246px
+		margin-left: 9px
+		justify-content: space-between
+		&__title
+			font-size: 16px
+			line-height: 22px
+			margin-bottom: 20px			
+		&__item
+			margin-bottom: 15px
+		&__list
+			margin-bottom: 39px
+			margin-right: 0
+			max-width: 113px
+			&:last-child
+				margin-bottom: 0
+		&__link
+			font-size: 14px
+			line-height: 20px
+
+
+			
+
+			
+	
+
+
+
+
+
+
+	

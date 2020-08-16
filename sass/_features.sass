@@ -1,4 +1,5 @@
 .features
+	padding-top: 95px
 	&__body
 		display: flex
 		align-items: center
@@ -43,6 +44,8 @@
 		font-size: 18px
 		line-height: 25px
 		color: #1565D8
+		&-text 
+			margin-right: 4px
 
 @media ( max-width: 992px	)
 	.feature-card
@@ -50,32 +53,61 @@
 		margin-bottom: 15px
 
 @media ( max-width: 768px	)
+	.features
+		&__desc
+			margin-bottom: 51px
+	.features-cards
+		max-width: 672px
 	.feature-card
 		display: flex
 		flex-direction: column
 		align-items: center
 		text-align: center
 		flex-basis: 100%
-		padding: 32px 0 41px 0
+		padding: 32px 0 39px 0
 		margin-bottom: 16px
 		&__title
 			font-size: 24px
 			line-height: 32px
+			margin-bottom: 2px
 		&__text
 			font-size: 18px
 			line-height: 32px
+			max-width: 90%
+			margin-bottom: 21px
+		&__link
+			max-width: 296px
+			margin-right: 0
+		&__icon
+			margin-bottom: 22px
 
 @media ( max-width: 576px )
 	.features
+		padding-top: 91px
+		&__subtitle
+			margin-bottom: 1px
 		&__desc
 			margin-bottom: 40px
 	.feature-card
+		padding: 35px 24px 30px 24px
+		margin-bottom: 12px
 		&__title
 			font-size: 20px
 			line-height: 24px
 		&__text
 			font-size: 16px
 			line-height: 28px
+		&__icon
+			margin-bottom: 18px
+		&__title
+			margin-bottom: 12px
+		&__text
+			max-width: 100%
+			margin-bottom: 16px
+		&__link
+			&-text 
+				font-size: 16px
+				line-height: 22px
 
 			
 			
