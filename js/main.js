@@ -68,6 +68,17 @@ $(document).ready(function () {
 		}
 	});
 
+	$('.accordion-pricing__trigger').click(function () {
+		const parent = $(this).parent();
+
+		if (parent.hasClass('accordion-pricing__item--active')) {
+			parent.removeClass('accordion-pricing__item--active')
+		} else {
+			$('.accordion-pricing__item').removeClass('accordion-pricing__item--active')
+			parent.addClass('accordion-pricing__item--active')
+		}
+	});
+
 	$('.switch__input').click(function () {
 		$('.pricing-card__cost_1').toggleClass('pricing-card__cost_1--hidden')
 		$('.pricing-card__cost_2').toggleClass('pricing-card__cost_2--visible')

@@ -48,6 +48,7 @@
 	background-image: url(../img/plus.svg)
 	background-repeat: no-repeat
 	background-position: center
+	background-size: contain
 .accordion-item__content
 	padding-left: 32px
 	padding-bottom: 17px
@@ -85,7 +86,123 @@
 	.accordion-item__trigger-name
 		max-width: 220px
 		
+
+
+
+.accordion-pricing
+	overflow: hidden
+	width: 100%
+	max-width: 960px
+	background-color: #fff
+	margin-bottom: 144px
+
+.accordion-pricing__item
+	background: #FFFFFF
+	border: 1px solid #E5EAF4
+	box-sizing: border-box
+	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.03)
+	border-radius: 8px
+	margin-bottom: 16px
+	&:last-child
+		margin-bottom: 0
+
+.accordion-pricing__trigger
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 34px 31px
+	width: 100%
+	background-color: #fff
 	
+
+.accordion-pricing__trigger-name
+	max-width: 93%
+	font-family: HK Grotesk
+	font-weight: 600
+	font-size: 20px
+	line-height: 24px
+	letter-spacing: 0.2px
+	color: #183B56
+
+
+.accordion-pricing__trigger-icon
+	cursor: pointer
+	content: ''
+	width: 14px
+	height: 14px
+	background-image: url(../img/accordion-pricing-plus.svg)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+
+.accordion-pricing__content
+	padding: 0 31px 28px 31px
+	background-color: #fff
+	display: none
+	width: 100%
+	font-style: normal
+	font-weight: normal
+	font-size: 18px
+	line-height: 32px
+	color: #5A7184
+
+.accordion-pricing__item--active .accordion-pricing__trigger
+	padding: 35px 32px 12px 32px
+.accordion-pricing__item--active .accordion-pricing__trigger-icon
+	background-image: url(../img/minus.svg)
+.accordion-pricing__item--active .accordion-pricing__trigger-name
+	color: #1565D8
+
+.accordion-pricing__item--active .accordion-pricing__content
+	display: block
+
+@media ( max-width: 768px )
+	.accordion-pricing
+		max-width: 650px
+		margin-bottom: 96px
+	.accordion-pricing__item--active .accordion-pricing__trigger
+		padding: 34px 32px 13px 32px
+	.accordion-pricing__trigger
+		padding: 31px 31px
+	.accordion-pricing__trigger-name
+		font-weight: 600
+		font-size: 20px
+		line-height: 24px
+		letter-spacing: 0.2px
+	.accordion-pricing__content
+		max-width: 100%
+		padding: 0 31px 30px 31px
+
+@media	( max-width: 576px )
+	.accordion-pricing
+		margin-bottom: 67px
+	.accordion-pricing__trigger-name
+		font-family: 'Open Sans', sans-serif
+		max-width: 92%
+		font-weight: 600
+		font-size: 16px
+		line-height: 22px
+	.accordion-pricing__content
+		font-size: 14px
+		line-height: 24px
+	.accordion-pricing__trigger
+		align-items: start
+		padding: 19px 18px 18px 18px
+	.accordion-pricing__item--active .accordion-pricing__trigger
+		padding: 24px 20px 8px 17px
+	.accordion-pricing__item--active .accordion-pricing__trigger-name
+		font-weight: 700
+	.accordion-pricing__content
+		padding: 0 26px 24px 20px
+	.accordion-pricing__trigger-icon
+		margin-top: 7px
+		width: 9px
+		height: 9px
+	.accordion-pricing__item
+	
+
+	
+
 
 
 

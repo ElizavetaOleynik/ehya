@@ -1,0 +1,125 @@
+.faq-pricing
+	padding-top: 147px
+	padding-bottom: 130px
+	overflow: hidden
+	background-image: url(../img/faq-pricing.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center top
+	&__body
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+	&__title
+		margin-bottom: 64px
+		font-family: HK Grotesk
+		font-weight: 700
+		font-size: 36px
+		line-height: 48px
+		text-align: center
+		letter-spacing: 0.2px
+		color: #183B56
+		&_questions
+			margin-bottom: 16px
+	&__subtitle
+		font-size: 18px
+		line-height: 32px
+		text-align: center
+		color: #5A7184
+		margin-bottom: 57px
+		max-width: 610px
+		font-weight: 400
+	&__cards
+		display: flex
+		justify-content: space-between
+		max-width: 960px
+		width: 100%
+	&__card
+		height: 202px
+		width: 465px
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		background: #FFFFFF
+		border: 1px solid #E5EAF4
+		box-sizing: border-box
+		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.03)
+		border-radius: 8px
+	&__icon
+		margin-bottom: 23px
+	&__img
+		width: 40px
+	&__link
+		font-family: HK Grotesk
+		font-weight: 700
+		font-size: 20px
+		line-height: 24px
+		text-align: center
+		letter-spacing: 0.2px
+		margin-bottom: 7px
+		color: #183B56
+	&__desc
+		font-size: 16px
+		line-height: 28px
+		text-align: center
+		color: #5A7184
+
+
+
+@media ( max-width: 1078px )
+	.faq-pricing
+		&__subtitle
+			margin-bottom: 48px
+		&__cards
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		&__card
+			margin-bottom: 16px
+			&:last-child
+				margin-bottom: 0
+@media ( max-width: 768px )
+	.faq-pricing
+		padding-bottom: 45px
+		padding-top: 95px
+		&__title
+			font-size: 32px
+			line-height: 40px
+			margin-bottom: 49px
+			&_questions
+				margin-bottom: 16px
+		&__card
+			padding-bottom: 10px
+@media ( max-width: 576px )
+	.faq-pricing
+		padding-bottom: 48px
+		padding-top: 79px
+		background-image: url(../img/faq-pricing-mobile.jpg)
+		&__title
+			font-size: 28px
+			line-height: 36px
+			margin-bottom: 31px
+			&_questions
+				font-size: 24px
+				line-height: 32px
+				margin-bottom: 16px
+		&__subtitle
+			font-size: 16px
+			line-height: 28px
+			margin-bottom: 24px
+		&__card
+			height: 179px
+			width: 288px
+			padding-bottom: 0
+		&__img
+			width: 36px
+		&__link
+			font-size: 16px
+			line-height: 20px
+		&__desc
+			font-size: 14px
+			line-height: 24px
+	
+
