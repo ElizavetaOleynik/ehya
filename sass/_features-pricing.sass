@@ -1,0 +1,192 @@
+.features-pricing
+	position: relative
+	padding-top: 64px
+	padding-bottom: 135px
+	&::after
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		width: 85.75%
+		height: 1px
+		background-color: #E5EAF4
+		content: ''
+	&__body
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__subtitle
+		margin-bottom: 16px
+		padding: 5px 12px
+		background-color: rgba(54,179,126,0.1)
+		color: #1565D8
+		border-radius: 2000px
+		font-weight: 600
+		font-size: 16px
+		line-height: 22px
+		text-align: center
+		text-transform: uppercase
+	&__title
+		max-width: 500px
+		margin-bottom: 64px
+		font-family: HK Grotesk
+		font-weight: 700
+		font-size: 36px
+		line-height: 48px
+		text-align: center
+		letter-spacing: 0.2px
+		color: #183B56
+	&__desc
+		display: none
+		font-size: 16px
+		line-height: 28px
+		text-align: center
+		color: #5A7184
+		margin-bottom: 48px
+	&__cards
+		display: flex
+		max-width: 1108px
+		flex-wrap: wrap
+		justify-content: space-between
+	&__card
+		flex-basis: 47.2%
+		display: flex
+		margin-bottom: 57px
+		&:nth-child(3)
+			margin-bottom: 0
+		&:nth-child(4)
+			margin-bottom: 0
+		&-icon
+			margin-right: 24px
+		&-text
+		&-title
+			font-family: HK Grotesk
+			font-weight: 600
+			font-size: 22px
+			line-height: 32px
+			letter-spacing: 0.2px
+			color: #183B56
+			margin-bottom: 8px
+		&-desc
+			font-size: 18px
+			line-height: 32px
+			color: #5A7184
+
+@media	( max-width: 1200px	)
+	.features-pricing
+		overflow: hidden
+		padding-top: 60px
+		&::after
+			width: 650px
+		&__subtitle
+			font-weight: 600
+			font-size: 14px
+			line-height: 20px
+			color: #36B37E
+		&__title
+			font-size: 32px
+			line-height: 40px
+			letter-spacing: 0.2px
+			color: #183B56
+		&__cards
+			max-width: 523px
+		&__card
+			flex-basis: 100%
+			margin-bottom: 32px
+			&:nth-child(3)
+				margin-bottom: 32px
+			&:nth-child(4)
+				margin-bottom: 0
+			&-title
+				font-weight: 600
+				font-size: 22px
+				line-height: 32px
+				letter-spacing: 0.2px
+			&-desc
+				font-size: 18px
+				line-height: 32px
+				color: #5A7184
+
+@media ( max-width: 768px )
+	.features-pricing
+		padding-bottom: 95px
+		padding-top: 36px
+		&__title
+			margin-bottom: 65px
+		&__card
+			margin-bottom: 34px
+@media ( max-width: 576px )
+	.features-pricing
+		padding-top: 56px
+		&__subtitle
+			padding: 2px 12px
+			font-weight: 600
+			font-size: 14px
+			line-height: 20px
+			text-align: center
+			color: #1565D8
+			margin-bottom: 16px
+		&__title
+			font-size: 28px
+			line-height: 36px
+			text-align: center
+			letter-spacing: 0.2px
+			margin-bottom: 16px
+		&__desc
+			display: block
+		&__cards
+		&__card
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			&-icon
+				margin-bottom: 32px
+				margin-right: 0
+			&-text
+				display: flex
+				flex-direction: column
+				align-items: center
+				text-align: center
+			&-title
+				margin-bottom: 12px
+				font-weight: 600
+				font-size: 20px
+				line-height: 24px
+				text-align: center
+				letter-spacing: 0.2px
+			&-desc
+				font-size: 16px
+				line-height: 28px
+				text-align: center
+				color: #5A7184
+				max-width: 90%
+@media	( max-width: 320px )
+	.features-pricing
+		padding-top: 20px
+		&__title
+			max-width: 272px
+		&__desc
+			margin-bottom: 44px
+		&__card
+			margin-bottom: 47px
+			&:nth-child(3)
+				margin-bottom: 47px
+			&-icon
+				margin-bottom: 30px
+
+
+
+
+
+
+			
+	
+
+
+	
+
+
+
+
+

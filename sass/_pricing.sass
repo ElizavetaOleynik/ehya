@@ -1,6 +1,7 @@
 .pricing
 	padding-bottom: 238px
 	&-bg
+		overflow: hidden
 		background-image: url(../img/pricing-bg.jpg)
 		background-repeat: no-repeat
 		background-size: cover
@@ -184,6 +185,11 @@
 				left: 30px
 
 @media ( max-width: 1200px )
+	.pricing-bg
+		background-image: url(../img/pricing-bg-tablet.jpg)
+	.pricing
+		padding-top: 88px
+		padding-bottom: 60px
 	.pricing-cards
 		flex-direction: column
 		align-items: center
@@ -221,10 +227,9 @@
 			margin-bottom: 0
 			
 @media ( max-width: 768px )
-	.pricing
-		padding-top: 88px
 	.switch
 		margin-bottom: 72px
+	
 
 @media ( max-width: 650px )
 	.pricing
