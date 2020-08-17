@@ -1,11 +1,21 @@
 .accordion
+	position: relative
 	overflow: hidden
 	width: 100%
-	border-top: 2.95px solid	#36B37E
 	box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.03)
 	border-radius: 8px 8px 16px 16px
 	background-color: #fff
 	margin-top: 10px
+	&::before
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 3px
+		content: ''
+		z-index: 1000
+		background-color: #36B37E
+
 
 .accordion-item
 	position: relative
@@ -20,38 +30,30 @@
 		background-color: #E5EAF4
 
 .accordion-item__trigger
-	position: relative
-	width: 100%
-	height: 79px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 25px 31px 29px 32px
 	background-color: #fff
+
 .accordion-item__trigger-name
-	position: absolute
-	max-width: 340px
-	left: 32px
-	bottom: 50%
-	transform: translateY(50%)
-	font-family: HK Grotesk
-	font-weight: bold
-	font-size: 20px
-	line-height: 24px
-	letter-spacing: 0.2px
+	font-family: Open Sans
+	font-style: normal
+	font-weight: 600
+	font-size: 18px
+	line-height: 25px
 	color: #183B56
 .accordion-item__trigger-icon
 	cursor: pointer
-	position: absolute
-	right: 32px
-	transform: translateY(-50%)
-	top: 50%
-	content: ''
 	width: 14px
 	height: 14px
 	background-image: url(../img/plus.svg)
 	background-repeat: no-repeat
 	background-position: center
-	background-size: contain
+	background-size: auto
 .accordion-item__content
 	padding-left: 32px
-	padding-bottom: 17px
+	padding-bottom: 20px
 	padding-right: 32px
 	background-color: #fff
 	display: none
@@ -62,30 +64,59 @@
 
 
 .accordion-item--active .accordion-item__trigger
+	padding: 37px 30px 13px 33px
 .accordion-item--active .accordion-item__trigger-icon
 	background-image: url(../img/minus.svg)
 
 .accordion-item--active .accordion-item__content
 	display: block
 
+.accordion-item--active .accordion-item__trigger-name
+	font-family: HK Grotesk
+	font-style: normal
+	font-weight: bold
+	font-size: 20px
+	line-height: 24px
+	letter-spacing: 0.2px
+
+
+@media ( max-width: 768px )
+	.accordion-item--active .accordion-item__trigger
+		padding: 38px 30px 13px 33px
+
+	.accordion-item__content
+		padding-bottom: 23px
+
 @media ( max-width: 576px )
 	.accordion-item__trigger
-		height: 97px
+		padding: 27px 31px 26px 23px
 	.accordion-item__trigger-icon
 		display: none
 	.accordion-item__trigger-name
 		max-width: 340px
-		left: 24px
+		font-family: Open Sans
+		font-weight: 600
 		font-size: 16px
 		line-height: 22px
+	.accordion-item--active .accordion-item__trigger-name
+		font-family: Open Sans
+		font-weight: 700
+		font-size: 16px
+		line-height: 22px
+	.accordion-item--active .accordion-item__trigger
+		padding: 36px 10px 12px 23px
 	.accordion-item__content
 		padding-left: 24px
 		font-size: 14px
 		line-height: 24px
-@media ( max-width: 400px )
-	.accordion-item__trigger-name
-		max-width: 220px
+		padding-bottom: 16px
+
+
 		
+
+
+
+
 
 
 
@@ -97,6 +128,7 @@
 	margin-bottom: 144px
 
 .accordion-pricing__item
+	position: relative
 	background: #FFFFFF
 	border: 1px solid #E5EAF4
 	box-sizing: border-box
@@ -105,7 +137,7 @@
 	margin-bottom: 16px
 	&:last-child
 		margin-bottom: 0
-
+	
 .accordion-pricing__trigger
 	display: flex
 	justify-content: space-between
@@ -133,7 +165,7 @@
 	background-image: url(../img/accordion-pricing-plus.svg)
 	background-repeat: no-repeat
 	background-position: center
-	background-size: contain
+	background-size: auto
 
 .accordion-pricing__content
 	padding: 0 31px 28px 31px

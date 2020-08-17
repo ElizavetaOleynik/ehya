@@ -38,12 +38,12 @@
 			margin-bottom: 28px
 	&-buttons
 		display: flex
-		justify-content: space-between
-		max-width: 464px
-		width: 100%
+		align-items: center
+		justify-content: center
 		flex-wrap: wrap
 		&__button-colored
-			padding: 0 26px 0 37px
+			margin-right: 16px
+		&__button-transparent
 	&__archive
 		margin-bottom: 105px
 		margin-top: 16px
@@ -62,10 +62,11 @@
 		line-height: 25px
 		color: #1565D8
 		&-text
-			margin-right: 15px
+			margin-right: 10px
 		&-img
 			
-
+.button-transparent__text
+	margin-right: 14px
 
 
 .hero-cards
@@ -73,6 +74,7 @@
 	max-width: 950px
 	flex-wrap: wrap
 	justify-content: space-between
+	margin-bottom: 32px
 
 .hero
 	&-card
@@ -81,12 +83,16 @@
 		flex-basis: 49%
 		min-height: 162px
 		align-items: start
-		padding: 32px
+		padding: 32px 32px 27px 32px
 		border: 1px solid #E5EAF4
 		box-sizing: border-box
 		box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05)
 		border-radius: 16px
 		background-color: #fff
+		&:nth-last-child(1)
+			margin-bottom: 0
+		&:nth-last-child(2)
+			margin-bottom: 0
 		&__text
 			max-width: 400px
 		&__img
@@ -144,11 +150,10 @@
 			margin-bottom: 80px
 		&-card
 			padding: 32px 32px 27px 32px
-			&:nth-last-child(2)
-				padding: 32px 32px 60px 32px
+			&:last-child
+				min-height: 258px
 		&-buttons
 			&__button-colored
-				padding: 0 26px 0 37px
 				color: #10243E
 				&::before
 					background-image: url(../img/github-black.svg)
@@ -174,17 +179,10 @@
 			line-height: 28px
 			margin-bottom: 40px
 		&-buttons
-			max-width: 207px
 			flex-direction: column
 			&__button-colored
-				height: 48px
-				font-size: 16px
-				line-height: 22px
 				margin-bottom: 12px
-			&__button-transparent 
-				height: 48px
-				font-size: 16px
-				line-height: 22px
+				margin-right: 0
 		&__archive
 			font-weight: 400
 			font-size: 14px
@@ -195,18 +193,20 @@
 			display: block
 			font-size: 16px
 			line-height: 22px
+			margin-top: 8px
 		&-cards
 			margin-bottom: 15px
 
 	.hero
 		&-card
-			padding: 32px 24px
 			flex-basis: 100%
 			align-items: center
-			padding: 32px 1px
 			margin-bottom: 8px
+			&:nth-last-child(1)
+				margin-bottom: 0
+				min-height: 100%
 			&:nth-last-child(2)
-				padding: 32px 1px
+				margin-bottom: 8px
 			&__img
 				margin-right: 0
 			&__text
@@ -222,6 +222,9 @@
 				line-height: 28px
 				
 @media	(max-width:	320px)
+	.hero-bg
+		background-image: url(../img/hero-background-320.jpg)
+		background-size: content
 	.hero
 		&__title
 			&_dark
@@ -230,12 +233,9 @@
 			&_dark
 				max-width: 272px
 				margin-bottom: 40px
-		&-buttons
-			&__button-colored
-				max-width: 207px
-				padding: 0 26px 0 24px
-			&__button-transparent
-				max-width: 207px
+		&-card
+			padding: 30px 2px 34px 2px
+
 
 
 
