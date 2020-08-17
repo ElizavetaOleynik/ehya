@@ -42,6 +42,8 @@
 		max-width: 464px
 		width: 100%
 		flex-wrap: wrap
+		&__button-colored
+			padding: 0 26px 0 37px
 	&__archive
 		margin-bottom: 105px
 		margin-top: 16px
@@ -144,8 +146,15 @@
 			padding: 32px 32px 27px 32px
 			&:nth-last-child(2)
 				padding: 32px 32px 60px 32px
+		&-buttons
+			&__button-colored
+				padding: 0 26px 0 37px
+				color: #10243E
+				&::before
+					background-image: url(../img/github-black.svg)
 		
-			
+	.hero-light
+		padding-top: 105px
 
 @media	(max-width:	576px)
 	.hero 
@@ -171,10 +180,7 @@
 				height: 48px
 				font-size: 16px
 				line-height: 22px
-				color: #183B56
 				margin-bottom: 12px
-				&::before
-					background-image: url(../img/github-black.svg)
 			&__button-transparent 
 				height: 48px
 				font-size: 16px
@@ -224,6 +230,12 @@
 			&_dark
 				max-width: 272px
 				margin-bottom: 40px
+		&-buttons
+			&__button-colored
+				max-width: 207px
+				padding: 0 26px 0 24px
+			&__button-transparent
+				max-width: 207px
 
 
 

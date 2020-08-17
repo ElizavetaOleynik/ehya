@@ -434,7 +434,7 @@ button:hover {
   text-align: center;
   color: #1565D8;
   height: 56px;
-  padding: 0 26px 0 38px;
+  padding: 0 26px 0 25px;
   border-radius: 2000px;
   font-weight: 700;
 }
@@ -1094,6 +1094,12 @@ body.touch .sub-sub-menu.open {
   .header__subtitle_dark {
     margin-bottom: 38px;
   }
+  .logo__img {
+    width: 74px;
+  }
+  .logo__img_dark {
+    width: 90px;
+  }
 }
 
 .hero-bg {
@@ -1165,6 +1171,10 @@ body.touch .sub-sub-menu.open {
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.hero-buttons__button-colored {
+  padding: 0 26px 0 37px;
 }
 
 .hero__archive {
@@ -1307,6 +1317,16 @@ body.touch .sub-sub-menu.open {
   .hero-card:nth-last-child(2) {
     padding: 32px 32px 60px 32px;
   }
+  .hero-buttons__button-colored {
+    padding: 0 26px 0 37px;
+    color: #10243E;
+  }
+  .hero-buttons__button-colored::before {
+    background-image: url(../img/github-black.svg);
+  }
+  .hero-light {
+    padding-top: 105px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1348,11 +1368,7 @@ body.touch .sub-sub-menu.open {
     height: 48px;
     font-size: 16px;
     line-height: 22px;
-    color: #183B56;
     margin-bottom: 12px;
-  }
-  .hero-buttons__button-colored::before {
-    background-image: url(../img/github-black.svg);
   }
   .hero-buttons__button-transparent {
     height: 48px;
@@ -1414,10 +1430,17 @@ body.touch .sub-sub-menu.open {
     max-width: 272px;
     margin-bottom: 40px;
   }
+  .hero-buttons__button-colored {
+    max-width: 207px;
+    padding: 0 26px 0 24px;
+  }
+  .hero-buttons__button-transparent {
+    max-width: 207px;
+  }
 }
 
 .install {
-  padding-top: 78px;
+  padding-top: 147px;
   padding-bottom: 97px;
 }
 
@@ -1552,6 +1575,7 @@ body.touch .sub-sub-menu.open {
 @media (max-width: 768px) {
   .install {
     padding-bottom: 105px;
+    padding-top: 79px;
   }
   .install-opportunities__item {
     margin-right: 34px;
@@ -1629,7 +1653,7 @@ body.touch .sub-sub-menu.open {
 }
 
 .information__desc {
-  margin-bottom: 55px;
+  margin-bottom: 60px;
 }
 
 .information-card {
@@ -1764,7 +1788,7 @@ body.touch .sub-sub-menu.open {
 }
 
 .features {
-  padding-top: 95px;
+  padding-top: 149px;
 }
 
 .features__body {
@@ -1850,6 +1874,9 @@ body.touch .sub-sub-menu.open {
 }
 
 @media (max-width: 768px) {
+  .features {
+    padding-top: 96px;
+  }
   .features__desc {
     margin-bottom: 51px;
   }
@@ -1933,7 +1960,7 @@ body.touch .sub-sub-menu.open {
 
 .sponsors {
   padding-top: 123px;
-  padding-bottom: 106px;
+  padding-bottom: 97px;
 }
 
 .sponsors__body {
@@ -1946,8 +1973,8 @@ body.touch .sub-sub-menu.open {
 }
 
 .sponsors__text {
-  padding-left: 85px;
-  margin-right: 160px;
+  padding-left: 97px;
+  margin-right: 143px;
 }
 
 .sponsors__title {
@@ -2633,6 +2660,13 @@ body.touch .sub-sub-menu.open {
     margin-bottom: 12px;
   }
   .cta-buttons__button-transparent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 20px 0 23px;
     height: 48px;
     font-size: 16px;
     line-height: 22px;
@@ -2781,6 +2815,7 @@ body.touch .sub-sub-menu.open {
   }
   .footer__body {
     padding-left: 11px;
+    margin-bottom: 63px;
   }
   .footer-menu {
     -ms-flex-wrap: wrap;
@@ -2877,6 +2912,12 @@ body.touch .sub-sub-menu.open {
   }
 }
 
+@media (max-width: 320px) {
+  .footer-menu {
+    max-width: 257px;
+  }
+}
+
 .pricing {
   padding-bottom: 238px;
 }
@@ -2901,22 +2942,6 @@ body.touch .sub-sub-menu.open {
 }
 
 .pricing-card__cost_2--visible {
-  display: block;
-}
-
-.pricing-card__span_1 {
-  display: block;
-}
-
-.pricing-card__span_2 {
-  display: none;
-}
-
-.pricing-card__span_1--hidden {
-  display: none;
-}
-
-.pricing-card__span_2--visible {
   display: block;
 }
 
@@ -2994,6 +3019,7 @@ body.touch .sub-sub-menu.open {
 }
 
 .pricing-card__span {
+  padding-bottom: 6px;
   font-size: 16px;
   line-height: 22px;
   color: #5A7184;
@@ -3163,6 +3189,10 @@ body.touch .sub-sub-menu.open {
   transition: .4s;
 }
 
+.switch__input:hover {
+  cursor: pointer;
+}
+
 .switch__input::before {
   position: absolute;
   content: '';
@@ -3280,6 +3310,9 @@ body.touch .sub-sub-menu.open {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 1px;
+  }
+  .pricing-card__span {
+    padding-bottom: 0;
   }
   .pricing-card__title {
     font-size: 20px;

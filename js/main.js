@@ -71,8 +71,6 @@ $(document).ready(function () {
 	$('.switch__input').click(function () {
 		$('.pricing-card__cost_1').toggleClass('pricing-card__cost_1--hidden')
 		$('.pricing-card__cost_2').toggleClass('pricing-card__cost_2--visible')
-		$('.pricing-card__span_1').toggleClass('pricing-card__span_1--hidden')
-		$('.pricing-card__span_2').toggleClass('pricing-card__span_2--visible')
 	})
 
 

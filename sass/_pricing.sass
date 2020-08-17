@@ -14,14 +14,7 @@
 	display: none
 .pricing-card__cost_2--visible
 	display: block
-.pricing-card__span_1
-	display: block
-.pricing-card__span_2
-	display: none
-.pricing-card__span_1--hidden
-	display: none
-.pricing-card__span_2--visible
-	display: block
+
 
 .pricing-cards
 	display: flex
@@ -63,6 +56,7 @@
 	&__cost_1
 	&__cost_2
 	&__span
+		padding-bottom: 6px
 		font-size: 16px
 		line-height: 22px
 		color: #5A7184
@@ -171,6 +165,8 @@
 		box-shadow: 0px 10px 20px rgba(20, 45, 65, 0.08)
 		border-radius: 18px
 		transition: .4s
+		&:hover
+			cursor: pointer
 		&::before
 			position: absolute 
 			content: ''
@@ -257,6 +253,8 @@
 				font-size: 40px
 				line-height: 40px
 				margin-bottom: 1px
+			&__span
+				padding-bottom: 0
 			&__title
 				font-size: 20px
 				line-height: 24px
