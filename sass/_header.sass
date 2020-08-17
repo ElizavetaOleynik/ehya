@@ -211,11 +211,8 @@ body.touch .sub-sub-menu.open
 			justify-content: space-between
 			align-items: center
 			padding: 28px 0
-
-	.logo
-		&__img
-			width: 77px
-			height: 24px
+			&_dark
+				max-width: 658px
 
 	.menu__list
 		overflow: auto
@@ -268,8 +265,6 @@ body.touch .sub-sub-menu.open
 		&:last-child
 			margin-bottom: 0
 
-	
-
 	.menu__link-btn
 		display: flex
 		justify-content: center
@@ -312,6 +307,42 @@ body.touch .sub-sub-menu.open
 			height: 2.2px
 			background-color: #fff
 			transition: all 0.3s ease 0s
+
+	.menu-burger_dark
+		position: relative
+		top: 0
+		left: 100%
+		transform: translateX(-100%)
+		z-index: 10
+		display: block
+		height: 18px
+		width: 22px
+		&::before
+			background-color: #3A4C66
+			position: absolute
+			top: 0
+			content: ''
+			width: 100%
+			height: 2.2px
+			transition: all 0.3s ease 0s
+		&::after
+			position: absolute
+			bottom: 0
+			content: ''
+			width: 100%
+			height: 2.2px
+			background-color: #3A4C66
+			transition: all 0.3s ease 0s
+			
+	.menu-burger__line_dark
+		background-color: #3A4C66
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		content: ''
+		width: 100%
+		height: 2.2px
+		transition: all 0.3s ease 0s	
 
 	.menu-burger--active
 		top: 0
@@ -356,6 +387,15 @@ body.touch .sub-sub-menu.open
 		right: -20px
 		width: 20px
 		height: 20px
+
+@media ( max-width: 320px )
+	.header
+		&__body
+			&_dark
+				max-width: 278px
+		&__subtitle
+			&_dark
+				margin-bottom: 38px
 
 
 
