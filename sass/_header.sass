@@ -46,18 +46,19 @@
 	background-repeat: no-repeat
 	&::after
 		position: absolute
-		bottom: -50%
+		bottom: 0
+		top: 50%
 		right: -50%
+		transform: translateY(-50%)
 		content: ''
-		width: 30px
+		width: 50px
 		height: 30px
 	&_light
 		background-image: url(../img/menu-arrow-down.svg)
 	&_dark
 		background-image: url(../img/arrow-down-dark.svg)
 
-.menu__arrow.active 
-	transform: rotate(180deg)
+
 
 .sub-menu
 	position: absolute
@@ -104,10 +105,14 @@
 	background-position: center center 
 	background-repeat: no-repeat
 	&::after
-		bottom: -100%
-		right: -100%
+		position: absolute
+		bottom: 0
+		top: 50%
+		right: -50%
+		-webkit-transform: translateY(-50%)
+		transform: translateY(-50%)
 		content: ''
-		width: 30px
+		width: 100px
 		height: 30px
 
 .sub-menu__arrow.active
@@ -127,10 +132,10 @@
 		position: absolute
 		z-index: 1
 		top: 0
-		left: -50px
+		left: -10px
 		content: ''
-		width: 50px
-		height: 100%
+		width: 10px
+		height: 50px
 
 .sub-sub-menu__item
 	position: relative
@@ -164,7 +169,8 @@
 	line-height: 22px
 	border: 2px solid #183B56
 
-		
+
+
 
 .menu-burger
 	display: none
@@ -176,11 +182,12 @@ body.mouse .menu__item:hover .sub-menu
 body.mouse .sub-menu__item:hover .sub-sub-menu
 	display: block
 
-body.touch .sub-menu.open
+body.touch .item--active .sub-menu.open
 	display: block
 
-body.touch .sub-sub-menu.open
+body.touch .item--active .sub-sub-menu.open
 	display: block
+
 .lock 
 	overflow: hidden
 
@@ -199,6 +206,18 @@ body.touch .sub-sub-menu.open
 		display: none
 		&::before
 			display: none
+
+	.sub-menu__item
+		margin-bottom: 0
+		padding-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+			padding-bottom: 0
+			
+	.sub-menu__item--active .sub-menu__link
+		color: #1565D8
+		font-weight: 600
+
 @media	( max-width: 768px )
 	.header
 		max-width: 100vw
@@ -215,36 +234,59 @@ body.touch .sub-sub-menu.open
 				max-width: 658px
 	.logo-light__img
 		width: 77px
+	.menu__list::-webkit-scrollbar
+		width: 0
+		height: 0
+	.menu__list::-webkit-scrollbar-track
+		background: none
+
+	.menu
+		position: relative
+		left: 0
+		top: 0
 
 	.menu__list
 		width: 304px
 		overflow: auto
 		display: none
 		position: absolute
-		top: 29px
-		right: 50px
+		right: -10px
+		top: -12px
 		background: #FFFFFF
 		box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16)
 		border-radius: 12px
-		padding: 36px 19px 26px 19px
+		padding: 36px 24px 26px 24px
 	.menu__item
-		width: 256px
-		margin-left: 0
-		margin-right: 10px
 		margin-bottom: 20px
+		margin-left: 0
 		&:last-child
 			margin-bottom: 0
 	.menu__link
 		color: #183B56
-		&::after
-			width: 0
-			height: 0
-	.menu__arrow
-		background-image: url(../img/sub-menu-arrow-right.svg)
+		font-weight: normal
+		font-size: 16px
+		line-height: 22px
 
-	.menu__arrow.active 
-		transform: rotate(90deg)
-	
+	.menu__arrow
+		position: absolute
+		top: 2px
+		right: 0
+		content: ''
+		width: 8px
+		height: 18px
+		background-position: center center
+		background-repeat: no-repeat
+		background-image: url(../img/sub-menu-arrow-right.svg)
+		&::after
+			position: absolute
+			bottom: 0
+			top: 50%
+			right: -50%
+			transform: translateY(-50%)
+			content: ''
+			width: 100px
+			height: 30px
+
 	.sub-menu
 		position: relative
 		top: 0
@@ -264,8 +306,11 @@ body.touch .sub-sub-menu.open
 		position: relative
 		max-width: 100%
 		margin-bottom: 16px
+		padding-bottom: 0
 		&:last-child
 			margin-bottom: 0
+	.menu__link_hidden
+		display: none
 
 	.menu__link-btn
 		display: flex
@@ -274,6 +319,8 @@ body.touch .sub-sub-menu.open
 		width: 100%
 		border: 2px solid #1565D8
 		border-radius: 8px
+		color: #1565D8
+		font-weight: 700
 
 	.menu-burger
 		position: relative
@@ -347,10 +394,12 @@ body.touch .sub-sub-menu.open
 		transition: all 0.3s ease 0s	
 
 	.menu-burger--active
-		top: 0
-		right: -20px
+		position: absolute
 		width: 20px
 		height: 20px
+		left: -9px
+		top: 2px
+
 	.menu-burger--active .menu-burger__line
 		transform: scale(0)
 	.menu-burger--active
@@ -374,21 +423,46 @@ body.touch .sub-sub-menu.open
 		display: block
 		z-index: 100
 
+	.item--active .menu__link
+		color: #1565D8
+		font-weight: 600
+
+	.item--active .menu__arrow
+		background-image: url(../img/arrow-down-blue.svg)
+
+	.sub-menu__item--active .sub-menu__link
+		color: #1565D8
+		font-weight: 600
+
+	.item--active .menu__link
+		color: #1565D8
+		font-weight: 600
+
+	.item--active .menu__arrow
+		background-image: url(../img/arrow-down-blue.svg)
+
 @media ( max-width: 576px)
 	.header
+		position: relative
 		&__body
 			padding: 20px 0
 			max-width: 94%
-	.menu__list
-		top: 11px
-		left: 8px
-		right: 8px
-
 	.menu-burger--active
+		left: 0
+		top: -8px
+
+	.sub-sub-menu
+		padding: 17px 0 0px 12px
+
+	.menu__list
+		max-height: 100vh
+		position: fixed
+		margin: auto
+		width: 95vw
 		top: 10px
-		right: -20px
-		width: 20px
-		height: 20px
+		right: 0
+		left: 0
+
 
 @media ( max-width: 320px )
 	.header

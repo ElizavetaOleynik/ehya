@@ -28,10 +28,19 @@ $(document).ready(function () {
 			let subMenu = arrow[i].nextElementSibling;
 			let thisArrow = arrow[i];
 
-			thisLink.classList.add('parent');
 			arrow[i].addEventListener('click', function () {
+
+				const parent = $(this).parent();
+				parent.toggleClass('item--active');
+
 				subMenu.classList.toggle('open');
 				thisArrow.classList.toggle('active');
+
+			});
+
+			$('.sub-menu__arrow').click(function () {
+				const parent = $(this).parent();
+				parent.toggleClass('sub-menu__item--active');
 			});
 
 		}
@@ -39,12 +48,15 @@ $(document).ready(function () {
 		body.classList.add('mouse'); //3 если не мобилка, то присвоим класс mouse 
 	};
 
+
+
 	let menuBurger = document.querySelector('.menu-burger');
 	menuBurger.addEventListener('click', function () {
 		document.querySelector('.menu__list').classList.toggle('menu__list--visible'),
 			document.querySelector('.menu-burger').classList.toggle('menu-burger--active'),
 			$('body').toggleClass('lock')
 	});
+
 
 	$('.btn').click(function (e) {
 		e.preventDefault();
@@ -70,7 +82,6 @@ $(document).ready(function () {
 
 	$('.accordion-pricing__trigger').click(function () {
 		const parent = $(this).parent();
-
 		if (parent.hasClass('accordion-pricing__item--active')) {
 			parent.removeClass('accordion-pricing__item--active')
 		} else {
@@ -83,6 +94,20 @@ $(document).ready(function () {
 		$('.pricing-card__cost_1').toggleClass('pricing-card__cost_1--hidden')
 		$('.pricing-card__cost_2').toggleClass('pricing-card__cost_2--visible')
 	});
+
+	$('.menu-burger').click(function () {
+		if ($(this).hasClass('menu-burger--active')) {
+			$('.menu__item').removeClass('item--active')
+			$('.sub-menu__item').removeClass('item--active')
+			$('.sub-menu__item').removeClass('sub-menu__item--active')
+			$('.sub-menu__arrow').removeClass('active')
+			$('.menu__arrow').removeClass('active')
+			$('.sub-menu').removeClass('open')
+			$('.sub-sub-menu').removeClass('open')
+		}
+	});
+
+
 
 	$('.slider').slick({
 		slidesToShow: 1,
