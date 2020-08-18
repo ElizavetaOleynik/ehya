@@ -883,21 +883,24 @@ body.touch .sub-sub-menu.open {
   .header__body_dark {
     max-width: 658px;
   }
+  .logo-light__img {
+    width: 77px;
+  }
   .menu__list {
+    width: 304px;
     overflow: auto;
-    min-width: 304px;
     display: none;
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 29px;
+    right: 50px;
     background: #FFFFFF;
     -webkit-box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16);
     border-radius: 12px;
-    padding: 36px 24px 26px 24px;
+    padding: 36px 19px 26px 19px;
   }
   .menu__item {
-    min-width: 256px;
+    width: 256px;
     margin-left: 0;
     margin-right: 10px;
     margin-bottom: 20px;
@@ -1348,6 +1351,9 @@ body.touch .sub-sub-menu.open {
   }
   .hero-buttons__button-colored::before {
     background-image: url(../img/github-black.svg);
+  }
+  .hero-buttons__button-transparent {
+    padding: 14px 32px 13px 24px;
   }
   .hero-light {
     padding-top: 105px;
@@ -2929,7 +2935,12 @@ body.touch .sub-sub-menu.open {
 }
 
 .footer__copyright {
-  margin-top: 24px;
+  margin-top: 19px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #5A7184;
 }
 
 .social-links {
