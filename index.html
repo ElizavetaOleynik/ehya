@@ -176,7 +176,8 @@
 							</li>
 
 							<li class="menu__item">
-								<a href="#" class="menu__link menu__link-light menu__button-light menu__link-btn">Get it now</a>
+								<a href="#" class="menu__link menu__link-light menu__button-light menu__link-btn"
+									data-toggle="modal">Get it now</a>
 							</li>
 
 						</ul>
@@ -477,7 +478,7 @@
 			<div class="sponsors__body">
 				<div class="sponsors__text">
 					<h2 class="sponsors__title">See all our great sponsors</h2>
-					<button class="sponsors__button">Become Sponsor</button>
+					<button class="sponsors__button" data-toggle="modal">Become Sponsor</button>
 				</div>
 				<div class="sponsors__images images-block">
 					<div class="images-block__item images-block__item--1">
@@ -651,7 +652,7 @@
 				<div class="cta-buttons">
 					<a href="https://github.com/ElizavetaOleynik/ehya" class="cta-buttons__button-colored button-colored">View on
 						Github</a>
-					<a href="#" class="cta-buttons__button-transparent button-transparent">
+					<a href="#" class="cta-buttons__button-transparent button-transparent" data-toggle="modal">
 						<span class="button-transparent__text">Get it now</span>
 						<img src="img/arrow-left.svg" alt="">
 					</a>
@@ -743,8 +744,59 @@
 	</footer>
 	<!-- /.footer -->
 
+	<div class="modal">
+		<div class="modal__overlay"></div>
+		<!-- /.modal__overlay -->
+		<div class="modal__dialog">
+			<a href="#" class="modal__close"><img src="img/modal-close.svg" alt="Icon: close" class="modal__close-img"></a>
+
+			<h3 class="modal__title">Let’s join us</h3>
+			<!-- /.modal__title -->
+
+			<a href="#" class="modal__button modal__link">
+				<img class="modal__button-img" src="img/google-button.svg" alt="">
+				<span class="modal__button-text">Sign up with Google</span>
+			</a>
+
+			<span class="modal__hint">Or, sign up with your email</span>
+
+			<form action="send.php" method="POST" class="modal__form form">
+
+				<span class="input__hint">Your name*</span>
+				<input class="input modal__input" type="text" placeholder="Enter name" name="name" required>
+
+				<span class="input__hint">Email address*</span>
+				<input class="input modal__input phone" type="tel" placeholder="Enter email address" name="phone" minlength="12"
+					required>
+
+				<span class="input__hint">Password*</span>
+				<input class="input modal__input" type="password" placeholder="Enter password" name="password" required>
+
+				<div class="modal__checkbox-wrap">
+					<input class="modal__checkbox" type="checkbox" name="testCheckbox">
+					<span class="modal__checkbox-text">Agree to terms & conditions</span>
+				</div>
+
+
+				<button class="modal__button form-button" type="submit" name="button" value="sendContacts" value="sendForm">Sign
+					up</button>
+				<!-- /.modal__button button -->
+
+				<div class="modal__login">
+					<span class="modal__login-span">Already have an account?</span>
+					<a href="#" class="modal__login-link">Sign in now</a>
+				</div>
+
+
+			</form>
+		</div>
+		<!-- /.modal__dialog -->
+	</div>
+	<!-- /.modal -->
+
 	<script src="js/jquery-3.5.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
