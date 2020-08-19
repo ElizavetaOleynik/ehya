@@ -21,6 +21,8 @@
 		padding: 48px 64px 46px 64px
 		max-width: 488px
 		transform: translate(-50%, -50%)
+		max-height: 98vh
+		overflow-y: auto
 	&__close
 		cursor: pointer
 		position: absolute
@@ -121,7 +123,7 @@
 
 label.error
 	font-size: 12px
-	color: #1565D8
+	color: red
 	font-weight: 600
 
 .input
@@ -135,7 +137,7 @@ label.error
 	height: 56px
 	margin-bottom: 0
 	padding: 0 21px
-	&__hint
+	&-hint
 		display: block
 		margin-bottom: 12px
 		font-weight: 600
@@ -162,8 +164,13 @@ label.error
 .modal__dialog--visible
 	visibility: visible
 
+.modal__dialog::-webkit-scrollbar
+	width: 0
+	height: 0
+.modal__dialog::-webkit-scrollbar-track
+	background: none
 
-@media	( max-width: 576px )
+@media	( max-width: 1024px )
 	.modal
 		&__close
 			top: 15px
@@ -258,7 +265,7 @@ label.error
 		margin-bottom: 0
 		padding: 0 21px
 		font-size: 14px
-		&__hint
+		&-hint
 			display: block
 			margin-bottom: 6px
 			margin-top: 10px
@@ -276,6 +283,8 @@ label.error
 		line-height: 25px
 		text-align: center
 		color: #FFFFFF
-	
+
+
+
 			
 	

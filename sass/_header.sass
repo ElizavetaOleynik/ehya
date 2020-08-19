@@ -12,6 +12,7 @@
 		
 .menu__list
 	display: flex
+	
 
 .menu__item
 	position: relative
@@ -69,6 +70,7 @@
 	box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16)
 	border-radius: 12px
 	display: none
+	z-index: 100
 	
 .sub-menu__item
 	position: relative
@@ -128,6 +130,7 @@
 	border-radius: 12px
 	background-color: #ffffff
 	display: none
+	z-index: 10000
 	&::before
 		position: absolute
 		z-index: 1
@@ -167,9 +170,14 @@
 	font-weight: bold
 	font-size: 16px
 	line-height: 22px
-	border: 2px solid #183B56
+	border: 2px solid #1565D8
+	color: #1565D8
 
-
+.sub-menu::-webkit-scrollbar
+	width: 0
+	height: 0
+.sub-menu::-webkit-scrollbar-track
+	background: none
 
 
 .menu-burger
@@ -195,6 +203,7 @@ body.touch .item--active .sub-sub-menu.open
 
 @media	( max-width: 1370px )
 	.sub-sub-menu
+		overflow-y: auto
 		position: relative
 		left: 0
 		top: 0
@@ -246,11 +255,12 @@ body.touch .item--active .sub-sub-menu.open
 		left: 0
 		top: 0
 		
+		
 	
 
 	.menu__list
 		width: 304px
-		overflow: auto
+		overflow-y: auto
 		display: none
 		position: absolute
 		right: -10px
@@ -291,6 +301,7 @@ body.touch .item--active .sub-sub-menu.open
 			height: 30px
 
 	.sub-menu
+		overflow-y: auto
 		position: relative
 		top: 0
 		min-width: 244px
@@ -397,6 +408,7 @@ body.touch .item--active .sub-sub-menu.open
 		transition: all 0.3s ease 0s	
 
 	.menu-burger--active
+		background-color: #fff
 		position: absolute
 		width: 20px
 		height: 20px
@@ -456,17 +468,21 @@ body.touch .item--active .sub-sub-menu.open
 		font-weight: 700
 
 @media ( max-width: 576px)
+	.lock 
+		overflow: hidden
 	.header
 		position: relative
 		&__body
 			padding: 20px 0
 			max-width: 94%
 	.menu-burger--active
+		background-color: #fff
 		left: 0
 		top: -8px
 
 	.sub-sub-menu
 		padding: 17px 0 0px 12px
+		
 
 	.menu__list
 		max-height: 100vh
@@ -478,7 +494,6 @@ body.touch .item--active .sub-sub-menu.open
 		left: 0
 
 	
-
 
 @media ( max-width: 320px )
 	.header
@@ -492,7 +507,24 @@ body.touch .item--active .sub-sub-menu.open
 		width: 74px
 		&_dark
 			width: 90px
-	
+
+@media ( min-height: 320px )	and (max-width: 1370px)
+	.menu__list
+		max-height: 80vh
+	.sub-menu
+		max-height: 70vh
+		overflow: hidden
+		overflow-y: auto
+
+@media ( max-height: 576px ) and (max-width: 1370px)
+	.menu__list
+		max-height: 80vh
+	.sub-menu
+		max-height: 70vh
+		overflow: hidden
+		overflow-y: auto
+
+
 
 
 

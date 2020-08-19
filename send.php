@@ -1,4 +1,3 @@
-
 <?php
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
@@ -9,18 +8,38 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$file = $_FILES['myfile'];
+$button = $_POST['button'];
+
+
+if ($button == 'sendForm'){
+    $title = "Зарегистрирован новый подписчик Ehya";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Почта:</b> $email<br><br>
+    <b>Пароль:</b><br>$password
+    ";
+}
+
+
+if ($button == 'sendFormPricing'){
+    $title = "Зарегистрирован новый подписчик Ehya";
+    $body = "
+    <h2>Новый подписчик</h2><br>
+    <b>Имя:</b> $name<br>
+    <b>Почта:</b> $email<br>
+    <b>Пароль:</b><br>$password
+    ";
+}
+// Формирование самого письма
+
+
+// Переменные, которые отправляет пользователь
+$email = $_POST['email'];
 
 // Формирование самого письма
-$title = "Регистрация пользователя Ehya";
-$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Пароль:</b><br>$password
-";
 
-// Настройки PHPMailer
+// Настройки PHPMailer 
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     $mail->isSMTP();   
@@ -40,7 +59,7 @@ try {
     // Получатель письма
     $mail->addAddress('oleynik.elizaveta1995@gmail.com');  
 
-
+ 
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;
@@ -57,29 +76,11 @@ else {$result = "error";}
 
 // Отображение результата
 if ($button == 'sendForm'){
-	$title = "Регистрация пользователя Ehya";
-	$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Пароль:</b><br>$password
-";
+    header('location: thankyou.html');
 }
 
 if ($button == 'sendFormPricing'){
-	$title = "Регистрация пользователя Ehya";
-	$body = "
-	<h2>Новое письмо</h2>
-	<b>Имя:</b> $name<br>
-	<b>Почта:</b> $email<br><br>
-	<b>Пароль:</b><br>$password
-	";
+    header('location: thankyou-pricing.html');
 }
 
-if ($button == 'sendForm' or $button == 'sendContacts'){
-	header('location: thankyou.html');
-}
 
-if ($button == 'sendFormPricing'){
-	header('location: thankyou-pricing.html');
-}

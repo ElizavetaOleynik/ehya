@@ -213,8 +213,8 @@
 						<div class="pricing-card pricing-card_standart">
 							<div class="pricing-card__inner">
 								<div class="pricing-card__price">
-									<span class="pricing-card__cost pricing-card__cost_standart pricing-card__cost_1">$33</span>
-									<span class="pricing-card__cost pricing-card__cost_standart pricing-card__cost_2">$39</span>
+									<span class="pricing-card__cost pricing-card__cost_standart pricing-card__cost_1">$39</span>
+									<span class="pricing-card__cost pricing-card__cost_standart pricing-card__cost_2">$45.99</span>
 									<span class="pricing-card__span pricing-card__span">/month</span>
 								</div>
 								<h3 class="pricing-card__title">Standard</h3>
@@ -260,8 +260,8 @@
 						<div class="pricing-card pricing-card_essentials">
 							<div class="pricing-card__inner">
 								<div class="pricing-card__price">
-									<span class="pricing-card__cost pricing-card__cost_essentials pricing-card__cost_1">$84</span>
-									<span class="pricing-card__cost pricing-card__cost_essentials pricing-card__cost_2">$99</span>
+									<span class="pricing-card__cost pricing-card__cost_essentials pricing-card__cost_1">$99</span>
+									<span class="pricing-card__cost pricing-card__cost_essentials pricing-card__cost_2">$115.99</span>
 									<span class="pricing-card__span pricing-card__span">/month</span>
 								</div>
 								<h3 class="pricing-card__title">Essentials</h3>
@@ -315,8 +315,8 @@
 						<div class="pricing-card pricing-card_premium">
 							<div class="pricing-card__inner">
 								<div class="pricing-card__price">
-									<span class="pricing-card__cost pricing-card__cost_premium pricing-card__cost_1">$288</span>
-									<span class="pricing-card__cost pricing-card__cost_premium pricing-card__cost_2">$339</span>
+									<span class="pricing-card__cost pricing-card__cost_premium pricing-card__cost_1">$339</span>
+									<span class="pricing-card__cost pricing-card__cost_premium pricing-card__cost_2">$399.99</span>
 									<span class="pricing-card__span pricing-card__span">/month</span>
 								</div>
 								<h3 class="pricing-card__title">Premium</h3>
@@ -521,7 +521,8 @@
 		<div class="container">
 			<div class="footer__body">
 				<div class="footer__info">
-					<a href="#" class="footer__logo"><img src="img/logo-dark.svg" alt="Logo" class="footer__logo-img"></a>
+					<a href="https://elizaveta-oleynik.ru/ehya/" class="footer__logo"><img src="img/logo-dark.svg" alt="Logo"
+							class="footer__logo-img"></a>
 					<h3 class="footer__subtitle">Build a modern and creative website with crealand</h3>
 					<div class="footer__social-links social-links">
 						<a href="https://www.google.com/" class="social-links__link" target="_blank"><img src="img/google.svg"
@@ -615,24 +616,23 @@
 
 			<form action="send.php" method="POST" class="modal__form form">
 
-				<span class="input__hint">Your name*</span>
+				<span class="input-hint">Your name*</span>
 				<input class="input modal__input" type="text" placeholder="Enter name" name="name" required>
 
-				<span class="input__hint">Email address*</span>
-				<input class="input modal__input phone" type="tel" placeholder="Enter email address" name="phone" minlength="18"
-					required>
+				<span class="input-hint">Email address*</span>
+				<input class="input modal__input email" type="email" placeholder="Enter email address" name="email" required>
 
-				<span class="input__hint">Password*</span>
-				<input class="input modal__input" type="email" placeholder="Enter password" name="email" required>
+				<span class="input-hint">Password*</span>
+				<input class="input modal__input" type="password" placeholder="Enter password" name="password" required>
 
 				<div class="modal__checkbox-wrap">
-					<input class="modal__checkbox" type="checkbox">
+					<input class="modal__checkbox" type="checkbox" name="testCheckbox">
 					<span class="modal__checkbox-text">Agree to terms & conditions</span>
 				</div>
 
 
-				<button class="modal__button form-button" type="submit" name="button" value="sendContacts"
-					value="sendFormPricing">Sign up</button>
+				<button class="modal__button form-button" type="submit" name="button" value="sendFormPricing">Sign
+					up</button>
 				<!-- /.modal__button button -->
 
 				<div class="modal__login">
@@ -640,11 +640,13 @@
 					<a href="#" class="modal__login-link">Sign in now</a>
 				</div>
 
+
 			</form>
 		</div>
 		<!-- /.modal__dialog -->
 	</div>
 	<!-- /.modal -->
+
 	<script src="js/jquery-3.5.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
